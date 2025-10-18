@@ -2,12 +2,12 @@
   (:domain lunar)
 
   (:objects
-    lander - lander
-    rover - rover
+    lander 
+    rover 
     wp1 wp2 wp3 wp4 wp5 - waypoint
-    sample - sample
-    image - image
-    scan - scan
+    sample 
+    image
+    scan
   )
 
   (:init
