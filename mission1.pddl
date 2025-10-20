@@ -2,17 +2,18 @@
   (:domain lunar)
 
   (:objects
-    lander 
-    rover 
+    lander - lander
+    rover - rover
     wp1 wp2 wp3 wp4 wp5 - waypoint
-    sample 
-    image
-    scan
+    sample - sample
+    image - image
+    scan - scan
   )
 
   (:init
     ;; Initial lander and rover state
     (lander_at lander wp3)
+    (has_landed lander)
     (undeployed rover)
     (empty_memory rover)
 
