@@ -8,7 +8,8 @@
     sample1 sample2 - sample
     image1 image2 - image
     scan1 scan2 - scan
-      
+    alice bob - astronaut
+    control1 dock1 control2 dock2 - area
   )
 
   (:init
@@ -16,7 +17,7 @@
     (rover_at rover1 wp2)
     (empty_memory rover1)
 
-    (not(has_land lander2))
+    (not (has_landed lander2))
     (undeployed rover2)
     (empty_memory rover2)
 
@@ -39,6 +40,14 @@
     (image_at wp3)
     (scan_at wp4)
     (scan_at wp6)
+
+    (in_docking_bay dock1)
+    (in_control_room control1)
+    (in_docking_bay dock2)
+    (in_control_room control2)
+
+    (astronaut_at alice lander1 dock1)
+    (astronaut_at bob lander2 control2)
   )
 
   (:goal (and
