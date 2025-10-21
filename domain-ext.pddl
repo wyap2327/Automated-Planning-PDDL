@@ -9,8 +9,8 @@
     image
     scan
       
-      astronaut
-      area
+    astronaut
+    area
   )
 
   (:predicates
@@ -116,9 +116,7 @@
   )
 
   (:action transmit_image
-    :parameters (?r - rover ?w - waypoint
-        ?a - astronaut ?ar -area
-    )
+    :parameters (?r - rover ?w - waypoint ?l - lander ?a - astronaut ?ar - area)
     :precondition (and (rover_at ?r ?w) (holding_image ?r)
 
         (astronaut_at ?a ?l ?ar)
@@ -132,9 +130,7 @@
   )
 
   (:action transmit_scan
-    :parameters (?r - rover ?w - waypoint
-        ?a - astronaut ?ar -area
-    )
+    :parameters (?r - rover ?w - waypoint ?l - lander ?a - astronaut ?ar - area)
     :precondition (and (rover_at ?r ?w) (holding_scan ?r)
 
         (astronaut_at ?a ?l ?ar)
