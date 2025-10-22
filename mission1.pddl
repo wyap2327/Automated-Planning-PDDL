@@ -13,6 +13,7 @@
   (:init
     ;; Initial lander and rover state
     (lander_at lander wp3)
+    (has_landed lander)
     (undeployed rover)
     (empty_memory rover)
 
