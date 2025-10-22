@@ -54,7 +54,7 @@
     )
   
   (:action land_lander
-      :parameters (?l ?w)
+      :parameters (?l - lander ?w - waypoint)
       :precondition (not(has_landed ?l))
       :effect (and(has_landed ?l) (lander_at ?l ?w))
   )
@@ -89,7 +89,7 @@
     )
   )
 
-  (:action collect-image
+  (:action collect_image
     :parameters (?r - rover ?w - waypoint)
     :precondition (and
       (rover_at ?r ?w)
@@ -102,7 +102,7 @@
     )
   )
 
-  (:action collect-scan
+  (:action collect_scan
     :parameters (?r - rover ?w - waypoint)
     :precondition (and
       (rover_at ?r ?w)
@@ -143,7 +143,7 @@
     )
   )
 
-  (:action collect-sample
+  (:action collect_sample
     :parameters (?r - rover ?w - waypoint)
     :precondition (and
       (rover_at ?r ?w)
@@ -156,7 +156,7 @@
     )
   )
 
-  (:action store-sample
+  (:action store_sample
     :parameters (?r - rover ?l - lander ?w - waypoint
         ?a - astronaut ?ar - area)
     :precondition (and
