@@ -13,6 +13,7 @@
   )
 
   (:init
+    ;; initial lander and rover state
     (lander_at lander1 wp2)
     (rover_at rover1 wp2)
     (empty_memory rover1)
@@ -21,6 +22,7 @@
     (undeployed rover2)
     (empty_memory rover2)
 
+    ;; map connectivity
     (connected wp1 wp2)
     (connected wp2 wp1)
     (connected wp2 wp3)
@@ -34,6 +36,7 @@
     (connected wp5 wp6)
     (connected wp6 wp5)
 
+    ;;sample/data location
     (sample_at wp1)
     (sample_at wp5)
     (image_at wp2)
@@ -41,11 +44,13 @@
     (scan_at wp4)
     (scan_at wp6)
 
+    ;; areas in landers
     (in_docking_bay dock1)
     (in_control_room control1)
     (in_docking_bay dock2)
     (in_control_room control2)
 
+    ;; inital astonaunt area
     (astronaut_at alice lander1 dock1)
     (astronaut_at bob lander2 control2)
   )
