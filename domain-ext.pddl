@@ -13,6 +13,7 @@
     area
   )
 
+  ;; describe the state of the world 
   (:predicates
     (rover_at ?r - rover ?w - waypoint)
     (lander_at ?l - lander ?w - waypoint)
@@ -40,7 +41,7 @@
     (in_docking_bay ?ar - area)
   )
 
-  
+  ;; move astronaut from one area to another
   (:action move_astronaut
       :parameters (?a - astronaut ?l - lander ?from - area ?to - area)
       :precondition (and 
@@ -59,7 +60,7 @@
       :effect (and(has_landed ?l) (lander_at ?l ?w))
   )
   
-  
+  ;; Astronant need to be at docking bay to deploy rover
   (:action deploy_rover
     :parameters (?r - rover ?l - lander ?w - waypoint
         ?a - astronaut ?ar - area
@@ -115,6 +116,7 @@
     )
   )
 
+  ;; Astronant need to be at control room to collect transmission of image
   (:action transmit_image
     :parameters (?r - rover ?w - waypoint ?l - lander ?a - astronaut ?ar - area)
     :precondition (and (rover_at ?r ?w) (holding_image ?r)
@@ -129,6 +131,7 @@
     )
   )
 
+  ;; Astronant need to be at control room to collect transmission of scan
   (:action transmit_scan
     :parameters (?r - rover ?w - waypoint ?l - lander ?a - astronaut ?ar - area)
     :precondition (and (rover_at ?r ?w) (holding_scan ?r)
@@ -156,6 +159,7 @@
     )
   )
 
+  ;; Astronant need to be at docking bay to collect sample
   (:action store_sample
     :parameters (?r - rover ?l - lander ?w - waypoint
         ?a - astronaut ?ar - area)
