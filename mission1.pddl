@@ -11,13 +11,13 @@
   )
 
   (:init
-    ;; Initial lander and rover state
+    ;; initial lander and rover state
     (lander_at lander wp3)
     (has_landed lander)
     (undeployed rover)
     (empty_memory rover)
 
-    ;; Map connectivity
+    ;; map connectivity
     (connected wp5 wp1)
     (connected wp1 wp2)
     (connected wp2 wp3)
@@ -25,7 +25,7 @@
     (connected wp1 wp4)
     (connected wp4 wp3)
 
-    ;; Objects at waypoints
+    ;;sample/data location
     (sample_at wp1)
     (image_at wp5)
     (scan_at wp3)
